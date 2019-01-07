@@ -14,6 +14,10 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "animate.css": "^3.7.0",
+    "axios": "^0.18.0",
+    "mint-ui": "^2.2.13",
+    "octicons": "^8.2.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
