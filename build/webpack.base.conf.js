@@ -74,7 +74,12 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      }
+      },
+       // sass编译加载器
+            {
+                test:/\.scss$/,
+                loader:['style-loader','css-loader','sass-loader']
+            }
     ]
   },
   node: {

@@ -4,7 +4,7 @@
       <router-link to="/" slot="left" class="more">
         <myicons name="three-bars" class="three-bars"></myicons>
       </router-link>
-       <router-link to="/" slot="left" class="search">
+       <router-link to="/search" slot="left" class="search" @click.native="goto('search')">
           <myicons name="search"></myicons>
        </router-link>
       <!-- <mt-button icon="more" slot="right" class=""></mt-button> -->
@@ -28,19 +28,18 @@ import myicons from '@/plugins/icons.js';//引入我们自定义图标组件
 Vue.use(myicons);
 export default {
   // name: "App"
+  	methods:{
+  			goto(name){
+  				console.log(name);
+  				
+//				this.$router.pull({name});
+  			}
+  	}
 };
 </script>
 
 <style>
 #app {
- 
-  /* font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-  height: 100%; */
 }
 #app .more,.search,.star{
   float: left;
