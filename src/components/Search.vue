@@ -27,15 +27,15 @@
 				keyword: '',
 
 				tabs: [{
-					title: "女装",
+					title: "女士",
 					name: "womenc",
 					id: "1"
 				}, {
-					title: "男装",
+					title: "男士",
 					name: "menc",
 					id: "2"
 				}, {
-					title: "童装",
+					title: "儿童",
 					name: "childrenc",
 					id: "3"
 				}],
