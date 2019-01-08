@@ -1,11 +1,6 @@
 <template>
   <div class="hello">
-    <!-- <ul>
-      <li v-for="item in list" :key="item.id">
-            <img :src="item.img" alt="">
-            {{item.img}}
-      </li>
-    </ul>-->
+    <mytop></mytop>
     <div v-for="item in list" :key="item.id" class="imgbox">
       <img :src="item.url">
     </div>
@@ -13,6 +8,7 @@
 </template>
 
 <script>
+import mytop from './public/Header.vue';
 export default {
   data() {
     return {
@@ -22,7 +18,10 @@ export default {
         { url: require("@/HomeImages/3.jpg"), id: 3 }
       ]
     };
-  }
+  },
+   components:{
+      mytop
+    }
 };
 </script>
 
