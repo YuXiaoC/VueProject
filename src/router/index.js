@@ -5,7 +5,8 @@ import Search from '@/components/Search';
 		import Womenc from '@/components/Searchlist/Womenc';
 		import Menc from '@/components/Searchlist/Menc';
 		import Childrenc from '@/components/Searchlist/Childrenc';
-			
+import Cart from '@/components/Cart';
+	
 import '@/App';
 
 Vue.use(Router);
@@ -44,6 +45,11 @@ routes: [
         }
       ]
 		
+	},
+	{
+		name:'Cart',
+		path:'/cart',
+		component:Cart,
 	}
 ]
 });
