@@ -1,5 +1,6 @@
 <template>
 	<div id="cart">
+		购物车
 		<div></div>
 		<div></div>
 		<div></div>
@@ -19,6 +20,8 @@
 </script>
 
 <style scoped lang="scss">
-	
+		#cart{
+			>&:
+		}
 	
 </style>
