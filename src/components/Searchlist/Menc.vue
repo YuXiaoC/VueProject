@@ -1,7 +1,16 @@
 <template>
-	<div>
-		ss
-	</div>
+		<ul>
+			<li>sds dsd  dsd</li>
+			<li>sds dsd  dsd</li>
+			<li>sds dsd  dsd</li>
+			<li>sds dsd  dsd</li>
+			<li>sds dsd  dsd</li>
+			<li>sds dsd  dsd</li>
+			<li>sds dsd  dsd</li>
+			<li>sds dsd  dsd</li>
+		
+		
+		</ul>
 </template>
 
 <script>
@@ -18,4 +27,7 @@
 </script>
 	
 <style lang="scss">
+	ul,li{
+		list-style: none;
+	}
 </style>
