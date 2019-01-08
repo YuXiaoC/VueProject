@@ -1,13 +1,14 @@
 <template>
   <div class="hello">
-    <ul>
+    <!-- <ul>
       <li v-for="item in list" :key="item.id">
             <img :src="item.img" alt="">
+            {{item.img}}
       </li>
-    </ul>
-    <!-- <div v-for="item in list" :key="item.id">
-      <img :src="item.img" alt="">
-    </div> -->
+    </ul>-->
+    <div v-for="item in list" :key="item.id" class="imgbox">
+      <img :src="item.url">
+    </div>
   </div>
 </template>
 
@@ -16,18 +17,9 @@ export default {
   data() {
     return {
       list: [
-        {
-          img:'../HomeImages/1.jpg',
-          id:1
-        },
-        {
-         img:'../HomeImages/2.jpg',
-          id:2
-        },
-        {
-          img:'../HomeImages/3.jpg',
-          id:3
-        }
+        { url: require("@/HomeImages/1.jpg"), id: 1 },
+        { url: require("@/HomeImages/2.jpg"), id: 2 },
+        { url: require("@/HomeImages/3.jpg"), id: 3 }
       ]
     };
   }
@@ -35,11 +27,11 @@ export default {
 </script>
 
 <style scoped>
- ul li {
-   list-style: none;
- }
- ul li img{
-   width: 100px;
-   height: 200px;
- }
+ul li {
+  list-style: none;
+}
+.imgbox img {
+  width: 100%;
+  height: 400px;
+}
 </style>

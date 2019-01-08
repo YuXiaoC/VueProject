@@ -39,13 +39,19 @@ export default {
 </script>
 
 <style>
-#app {
+*{
+  padding: 0;
+  margin: 0;
 }
 #app .more,.search,.star{
   float: left;
+  fill: azure;
 }
 #app .search ,.star{
   margin-left: 20px;
+}
+#app .heart{
+  fill: azure;
 }
 #app .mint-header-title{
   font-weight: 600;
