@@ -8,7 +8,7 @@
           <myicons name="search"></myicons>
        </router-link>
       <!-- <mt-button icon="more" slot="right" class=""></mt-button> -->
-       <router-link to="/" slot="right">
+       <router-link to="/cart" slot="right">
           <myicons name="star" class="star"></myicons>
           <myicons name="heart" class="heart"></myicons>
        </router-link>
