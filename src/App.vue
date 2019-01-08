@@ -32,21 +32,20 @@ export default {
 </script>
 
 <style>
-#app {
- 
-  /* font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-  height: 100%; */
+#app {}
+*{
+  padding: 0;
+  margin: 0;
 }
 #app .more,.search,.star{
   float: left;
+  fill: azure;
 }
 #app .search ,.star{
   margin-left: 20px;
+}
+#app .heart{
+  fill: azure;
 }
 #app .mint-header-title{
   font-weight: 600;
