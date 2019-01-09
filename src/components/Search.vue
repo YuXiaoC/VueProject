@@ -1,6 +1,5 @@
 <template>
-	
-	<div>
+	<div class="searchbox">
 		<mytop></mytop>
 		<div class="mysearch">
 			<input type="search" name="" required="" placeholder="请输入品牌或商品类别进行搜索" x-webkit-speech="" x-webkit-grammar="builtin:search" lang="zh-CN">
@@ -9,13 +8,12 @@
 			</button>
 		</div>
 
-		<div>
-			<mt-navbar v-model="selected">
-				<mt-tab-item :id="tab.id" v-for="tab in tabs" :key="tab.name" @click.native="goto(tab.name)">{{tab.title}}</mt-tab-item>
-			</mt-navbar>
-			<mt-tab-container v-model="selected">
-				<router-view/>
-			</mt-tab-container>
+		<mt-navbar v-model="selected">
+			<mt-tab-item :id="tab.id" v-for="tab in tabs" :key="tab.name" @click.native="goto(tab.name)">{{tab.title}}</mt-tab-item>
+		</mt-navbar>
+
+		<div class="goodcon">
+			<router-view/>
 		</div>
 
 	</div>
@@ -23,11 +21,25 @@
 
 <script>
 	import mytop from './public/Header';
+	import iconfont from '../iconfont/iconfont.css';
 	export default {
 
 		data() {
 			return {
 				keyword: '',
+				list: [{
+						url: require("@/HomeImages/1.jpg"),
+						id: 1
+					},
+					{
+						url: require("@/HomeImages/2.jpg"),
+						id: 2
+					},
+					{
+						url: require("@/HomeImages/3.jpg"),
+						id: 3
+					}
+				],
 
 				tabs: [{
 					title: "女士",
@@ -46,9 +58,9 @@
 
 			}
 		},
-		  components:{
-      			mytop
-   		 },
+		components: {
+			mytop
+		},
 		methods: {
 			goto(name) {
 				this.$router.push({
@@ -60,24 +72,34 @@
 </script>
 
 <style scoped lang="scss">
-	.mysearch {
+	.searchbox {
+		height: 100%;
+		width: 100%;
 		display: flex;
-		height: 68px;
-		background: #222;
-		padding: 12px;
-		box-sizing: border-box;
-		>input {
-			border-radius: 5px;
-			height: 44px;
-			flex: 1;
+		flex-direction: column;
+		.mysearch {
+			display: flex;
+			height: 68px;
+			background: #222;
+			padding: 12px;
+			box-sizing: border-box;
+			>input {
+				border-radius: 5px;
+				height: 44px;
+				flex: 1;
+			}
+			>button {
+				padding: 0;
+				width: 36px;
+				border-radius: 4px;
+				border: 1px solid hsla(0, 0%, 71%, .25098);
+				background: transparent;
+				margin-left: 12px;
+			}
 		}
-		>button {
-			padding: 0;
-			width: 36px;
-			border-radius: 4px;
-			border: 1px solid hsla(0, 0%, 71%, .25098);
-			background: transparent;
-			margin-left: 12px;
+		>.goodcon {
+			overflow-x: hidden;
+			flex: 1;
 		}
 	}
 </style>
