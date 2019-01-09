@@ -3,7 +3,7 @@
     <!-- <slot></slot>  -->
     <router-link  to="/">
       <mt-header title="FARFETCH">
-        <router-link to="/slider" slot="left" class="more">
+        <router-link to="/slider"  slot="left" class="more">
           <myicons name="three-bars" class="three-bars"></myicons>
         </router-link>
         <router-link to="/search" slot="left" class="search">
