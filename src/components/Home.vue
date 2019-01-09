@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <mytop></mytop>
+    <!-- <button :handleSlide="slide">点击滑动</button> -->
     <div v-for="item in list" :key="item.id" class="imgbox">
       <img :src="item.url">
     </div>
@@ -8,8 +9,13 @@
 </template>
 
 <script>
+import 'animate.css';
 import mytop from './public/Header.vue';
 export default {
+  // props:{
+  //   type:Function,
+  //   handleSlide
+  // },
   data() {
     return {
       list: [
