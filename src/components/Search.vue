@@ -1,5 +1,7 @@
 <template>
+	
 	<div>
+		<mytop></mytop>
 		<div class="mysearch">
 			<input type="search" name="" required="" placeholder="请输入品牌或商品类别进行搜索" x-webkit-speech="" x-webkit-grammar="builtin:search" lang="zh-CN">
 			<button>
@@ -20,6 +22,7 @@
 </template>
 
 <script>
+	import mytop from './public/Header';
 	export default {
 
 		data() {
@@ -43,6 +46,9 @@
 
 			}
 		},
+		  components:{
+      			mytop
+   		 },
 		methods: {
 			goto(name) {
 				this.$router.push({
