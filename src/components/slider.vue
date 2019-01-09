@@ -1,10 +1,23 @@
 <template>
-    <div>侧边栏组件(未做)</div>
+    <div>
+        <Tabs></Tabs>
+        <Reg></Reg>
+    </div>
 </template>
 
 <script>
+import Tabs from './slide/tabs';
+import Reg from './slide/reg';
 export default {
-    
+    data(){
+        return{
+
+        }
+    },
+    components:{
+        Tabs,
+        Reg
+    }
 }
 </script>
 
