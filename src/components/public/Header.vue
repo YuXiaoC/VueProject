@@ -5,11 +5,11 @@
       <router-link to="/" slot="left" class="more">
         <myicons name="three-bars" class="three-bars"></myicons>
       </router-link>
-      <router-link to="/search" slot="left" class="search" @click.native="goto('search')">
+      <router-link to="/search" slot="left" class="search">
         <myicons name="search"></myicons>
       </router-link>
       <!-- <mt-button icon="more" slot="right" class=""></mt-button> -->
-      <router-link to="/" slot="right">
+      <router-link to="/cart" slot="right">
         <myicons name="star" class="star"></myicons>
         <myicons name="heart" class="heart"></myicons>
       </router-link>
