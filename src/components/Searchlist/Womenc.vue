@@ -55,7 +55,7 @@
 	};
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 	.womenc {
 		.clike{
 			font-weight: bold;
