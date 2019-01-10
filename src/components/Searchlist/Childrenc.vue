@@ -55,7 +55,7 @@
 	};
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 	.childrenc {
 		.clike{
 			font-weight: bold;
