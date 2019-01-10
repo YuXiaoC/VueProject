@@ -55,7 +55,7 @@
 	};
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 	.menc {
 		.clike{
 			font-weight: bold;
