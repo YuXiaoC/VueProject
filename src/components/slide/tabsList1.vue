@@ -8,13 +8,14 @@
              <myicons name="chevron-right"></myicons>
              </keep-alive>
         </mt-cell>
-        <router-view></router-view>
       </mt-tab-container-item>
     </mt-tab-container>
+    <Reg></Reg>
   </div>
 </template>
 
 <script>
+import Reg from "./reg";
 export default {
   data() {
     return {
@@ -42,6 +43,9 @@ export default {
       ],
       selected:'1'
     };
+  },
+  components:{
+    Reg
   }
 };
 </script>
