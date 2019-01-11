@@ -1,19 +1,26 @@
 <template>
-  <div class="slideBox">
-    <Tabs></Tabs>
-  </div>
+    <div>
+        <Tabs></Tabs>
+        <Reg></Reg>
+    </div>
 </template>
 
 <script>
-import Tabs from "./slide/tabs";
+import Tabs from './slide/tabs';
+import Reg from './slide/reg';
 export default {
-  data() {
-    return {};
-  },
-  components: {
-    Tabs
-  }
-};
+    data(){
+        return{
+
+        }
+    },
+    components:{
+        Tabs,
+        Reg
+    }
+}
 </script>
-<style scoped lang="scss">
+
+<style>
+
 </style>

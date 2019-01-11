@@ -49,10 +49,7 @@ export default {
 
 <style scoped>
 .tabBox {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background: #222;
+  width: 85%;
 }
 
 </style>
