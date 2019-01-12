@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <mytop></mytop>
+    <mytop @clickMove="fnClick"></mytop>
     <!-- <button :handleSlide="slide">点击滑动</button> -->
     <div class="picBox">
       <div class="pic1">
@@ -57,8 +57,14 @@ export default {
         { url: require("@/HomeImages/H-Image4.jpg"), id: 1 },
         { url: require("@/HomeImages/2.jpg"), id: 2 },
         { url: require("@/HomeImages/3.jpg"), id: 3 }
-      ]
+      ],
     };
+  },
+  methods:{
+    fnClick(){
+      console.log(this.$store.state.isPosit);
+      // this.$emit('homeSlide');
+    }
   },
   components: {
     mytop
@@ -72,7 +78,7 @@ body {
     .home {
       overflow: hidden;
       width: 100%;
-      .holle {
+      .hello {
          height: 100%;
          position: relative;
          overflow: hidden;
