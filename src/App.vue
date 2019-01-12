@@ -10,6 +10,7 @@
 import Vue from "vue";
 import axios from "axios";
 Vue.prototype.$axios = axios; //将axios写入Vue原型对象，方便后面使用
+	
 export default {
   // props: ["name"],
   // data: {
