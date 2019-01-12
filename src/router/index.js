@@ -52,5 +52,9 @@ export default new Router({
       path: '/cart',
       component: Cart,
     },
+    {
+      path:'/slider',
+      component:Slider
+    }
   ]
 });

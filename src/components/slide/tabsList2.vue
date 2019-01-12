@@ -6,7 +6,7 @@
         <mt-cell v-for="item in tabList" :title="item.title" :key="item.id">
              <myicons name="chevron-right"></myicons>
         </mt-cell>
-        <!-- <router-view></router-view> -->
+        <router-view></router-view>
       </mt-tab-container-item>
     </mt-tab-container>
   </div>
