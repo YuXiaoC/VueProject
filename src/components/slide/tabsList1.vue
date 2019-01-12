@@ -8,7 +8,7 @@
              <myicons name="chevron-right"></myicons>
              </keep-alive>
         </mt-cell>
-        <router-view></router-view>
+        <!-- <router-view></router-view> -->
       </mt-tab-container-item>
     </mt-tab-container>
   </div>

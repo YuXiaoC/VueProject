@@ -3,9 +3,9 @@
     <!-- <slot></slot>  -->
     <router-link  to="/">
       <mt-header title="FARFETCH">
-        <router-link to="/slider"  slot="left" class="more">
+        <div slot="left" class="more"  @click="change">
           <myicons name="three-bars" class="three-bars"></myicons>
-        </router-link>
+        </div>
         <router-link to="/search" slot="left" class="search">
           <myicons name="search"></myicons>
         </router-link>
@@ -26,8 +26,16 @@ import "mint-ui/lib/style.css"; //引入mint-ui插件样式
 import myicons from "@/plugins/icons.js"; //引入我们自定义图标组件
 Vue.use(myicons);
 export default {
+  methods:{
+   move(){
+        this.$emit('clickMove');
+    },
+    change(){
+      this.$store.commit('changeIsPosit');
+      // console.log(this.$store.state.isPosit)
+      }
+  },
   created() {
-    console.log(666);
   }
 };
 </script>

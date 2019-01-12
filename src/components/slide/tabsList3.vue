@@ -6,7 +6,7 @@
         <mt-cell v-for="item in tabList" :title="item.title" :key="item.id">
              <myicons name="chevron-right"></myicons>
         </mt-cell>
-        <router-view></router-view>
+        <!-- <router-view></router-view> -->
       </mt-tab-container-item>
     </mt-tab-container>
   </div>
@@ -36,6 +36,25 @@ export default {
         {
           id: 5,
           title: "儿童5"
+        },{
+          id: 6,
+          title: "儿童6"
+        },
+        {
+          id: 7,
+          title: "儿童7"
+        },
+        {
+          id: 8,
+          title: "儿童8"
+        },
+        {
+          id: 9,
+          title: "儿童9"
+        },
+        {
+          id: 10,
+          title: "儿童10"
         }
       ],
       selected:'1'
