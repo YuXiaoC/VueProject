@@ -58,13 +58,6 @@
 
 			}
 		},
-		created(){
-		this.$axios.get('http://localhost:4008/farapi/cn/plpslice/listing-api/products-facets').then(res=>{
-			console.log(res);
-			})
-   		 },
-		
-		
 		components: {
 			mytop
 		},

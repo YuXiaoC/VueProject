@@ -77,7 +77,6 @@
 		data() {
 			return {
 
-
 			}
 		},
 		components: {
