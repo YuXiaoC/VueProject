@@ -61,13 +61,15 @@ export default {
 </script>
 
 <style>
-* {
+
+*{
   padding: 0;
   margin: 0;
 }
 html,
 body{
   height: 100%;
+  width: 100%;
   /* overflow-y: scroll; */
   /* overflow: hidden; */
 }
@@ -126,5 +128,5 @@ body{
 .slide-enter,
 .slide-leave {
   transition: all;
-}
+} 
 </style>
