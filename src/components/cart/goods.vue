@@ -3,7 +3,7 @@
 			<div v-for="item in list" :key="item.id" class="imgbox">
      				<div class="goodst">
      							<p class="touxiang">
-     								<img :src="item.url" alt="" />
+     								<img :src="item.images.model"  alt="" />
      							</p>
      							<p class="instructions">
      								从United kingdom配送的1项商品
@@ -16,12 +16,12 @@
      				</div>
      				<div class="goodsc">
      						<div class="goodscl">
-     								<img :src="item.url" alt="" />
+     								<img :src="item.images.cutOut" alt="" />
      						</div>
      						<div class="goodscr">
      								<div class="xingxi">
-     								  <p class="xingxip1">	<span class="mingchen">JACQUEMUS</span><i class="iconfont icon-x"></i></p>
-     									<p class="xingxip2">商品编号：<span>13016578</span></p>
+     								  <p class="xingxip1">	<span class="mingchen">{{item.shortDescription}}</span><i class="iconfont icon-x"></i></p>
+     									<p class="xingxip2">商品编号：<span>{{item.id}}</span></p>
      								</div>
      								<div class="num">
      									<p class="pr"><span>数量1</span><i class="iconfont icon-xia"></i></p>
@@ -30,7 +30,7 @@
      						</div>
      				</div>
      				<div class="goodsb">
-     					<div class="goodsb1"><p class="fl f10"><i class="iconfont icon-xingxing"></i><span>加入愿望单</span></p><p class="fr f12"><del><i class="iconfont icon-qian"></i><span>5637.48</span></del><span class="red"><i class="iconfont icon-qian"></i>2318.50</span></p></div>
+     					<div class="goodsb1"><p class="fl f10"><i class="iconfont icon-xingxing"></i><span>加入愿望单</span></p><p class="fr f12"><del><i class="iconfont icon-qian"></i><span>{{item.priceInfo.initialPrice}}</span></del><span class="red"><i class="iconfont icon-qian"></i>{{item.priceInfo.finalPrice}}</span></p></div>
      					<div class="goodsb2"><p class="fr f10">(已含关税)</p></div>		
      				</div>
    	 </div>
@@ -42,22 +42,16 @@
 	 export default {
 	 	data(){
 	 			return {
-	 				
-	 			list: [{
-						url: require("@/HomeImages/1.jpg"),
-						id: 1
-					},
-					{
-						url: require("@/HomeImages/2.jpg"),
-						id: 2
-					},
-					{
-						url: require("@/HomeImages/3.jpg"),
-						id: 3
-					}
-				]
-	 			}
+	 			list:{}
 	 		}
+	 	},
+	 	 created() {
+		 	var shuju=document.cookie;
+		 	var shuju=JSON.parse(shuju);
+		 	this.list[0]=shuju;
+		 	console.log(this.list);	
+		 	
+		 }
 	 }
 </script>
 
