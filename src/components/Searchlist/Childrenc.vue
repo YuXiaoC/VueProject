@@ -5,8 +5,8 @@
 		</div>
 		<div class="carousel">
 			<mt-swipe :auto="2000">
-				<mt-swipe-item v-for="item in list" :key="item.id">
-					<img :src="item.url" />
+				<mt-swipe-item v-for="item in list" :key="item.id" @click.native="goto(item.id)">
+					<img :src="item.images.cutOut" />
 				</mt-swipe-item>
 			</mt-swipe>
 		</div>
@@ -15,7 +15,7 @@
 		</div>
 		<div class="hotsearch">
 				<ul>
-					<li v-for="hs in hotsearch" :title="hs" :key="hs"><span>{{hs}}</span> <i class="iconfont icon-right"></i> </li>
+					<li v-for="rs in recentsearch" :title="rs.shortDescription" :key="rs.id" @click="goto(rs.id)"><span>{{rs.shortDescription}}</span> <i class="iconfont icon-right"></i> </li>
 				</ul>
 		</div>
 		<div class="hot">
@@ -23,7 +23,7 @@
 		</div>
 		<div class="hotsearch">
 				<ul>
-					<li v-for="hs in hotsearch" :title="hs" :key="hs"><span>{{hs}}</span><i class="iconfont icon-right"></i> </li>
+					<li v-for="hs in hotsearch" :title="hs.shortDescription" :key="hs.id" @click="goto(hs.id)"><span>{{hs.shortDescription}}</span><i class="iconfont icon-right"></i> </li>
 				</ul>
 		</div>
 	</div>
@@ -33,24 +33,23 @@
 	export default {
 		data() {
 			return {
-				list: [{
-						url: require("@/HomeImages/1.jpg"),
-						id: 1
-					},
-					{
-						url: require("@/HomeImages/2.jpg"),
-						id: 2
-					},
-					{
-						url: require("@/HomeImages/3.jpg"),
-						id: 3
-					}
-				],
-				hotsearch:['Gucci','Alexander','Saint Laurent','Dsquared2','Valentino']
+				list: [],
+				recentsearch:[],
+				hotsearch:[]
 			};
 		},
+		created(){
+		this.$axios.get('http://localhost:4008/farapi/cn/plpslice/listing-api/products-facets').then(res=>{
+			let data = res.data;
+			this.list = data.products.sort((a, b) => b.brand.id - a.brand.id).slice(20,23);	
+			this.recentsearch = data.products.sort((a, b) => b.brand.id - a.brand.id).slice(6,10);				
+			this.hotsearch = data.products.sort((a, b) => b.brand.id - a.brand.id).slice(0,5);		
+		})
+   		 },
 		methods: {
-
+			goto(id){
+				this.$router.push({path:'/detailpage/'+id})
+			}
 		}
 	};
 </script>
