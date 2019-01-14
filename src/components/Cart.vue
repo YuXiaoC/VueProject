@@ -77,7 +77,6 @@
 		data() {
 			return {
 
-
 			}
 		},
 		components: {
@@ -88,7 +87,9 @@
 		 	myback(){
 		 		 this.$router.go(-1);
 		 	}
-		 }
+		 	
+		 },
+		
 		
 	}
 </script>
