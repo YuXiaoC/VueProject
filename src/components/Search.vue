@@ -27,19 +27,7 @@
 		data() {
 			return {
 				keyword: '',
-				list: [{
-						url: require("@/HomeImages/1.jpg"),
-						id: 1
-					},
-					{
-						url: require("@/HomeImages/2.jpg"),
-						id: 2
-					},
-					{
-						url: require("@/HomeImages/3.jpg"),
-						id: 3
-					}
-				],
+				list: [],
 
 				tabs: [{
 					title: "女士",
@@ -61,7 +49,9 @@
 		created(){
 		this.$axios.get('http://localhost:4008/farapi/cn/plpslice/listing-api/products-facets').then(res=>{
 			console.log(res);
-			})
+			let data = res.data;
+			this.list = data.products.sort((a, b) => b.brand.id - a.brand.id).slice(0,6);	
+		})
    		 },
 		
 		
