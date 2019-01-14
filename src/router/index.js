@@ -7,7 +7,8 @@ import Menc from '@/components/Searchlist/Menc';
 import Childrenc from '@/components/Searchlist/Childrenc';
 import Cart from '@/components/Cart';
 import Slider from '@/components/slider';
-
+import Detailpage from '@/components/Detailpage';
+import List from '@/components/list';
 import '@/App';
 
 Vue.use(Router);
@@ -55,6 +56,16 @@ export default new Router({
     {
       path:'/slider',
       component:Slider
+    },
+     {
+      name: 'Detailpage',
+      path: '/detailpage/:id',
+      component: Detailpage,
+    },
+     {
+      name: 'List',
+      path: '/list',
+      component: List,
     }
   ]
 });
